@@ -25,7 +25,7 @@ const loadingScreen = () => {
 }
 
 const gatherInfo = async (searchLoacation) => {
-    let url = `http://api.weatherapi.com/v1/current.json?key=b6045a225b9342e5afd15235241610&q=${searchLoacation}&aqi=no`;
+    let url = `https://api.weatherapi.com/v1/current.json?key=b6045a225b9342e5afd15235241610&q=${searchLoacation}&aqi=no`;
 
     const res = await fetch(url);
     const data = await res.json();    
@@ -44,7 +44,7 @@ const gatherInfo = async (searchLoacation) => {
 }
 
 const gatherForecast = async (searchLoacation) => {
-    let url = `http://api.weatherapi.com/v1/forecast.json?key=b6045a225b9342e5afd15235241610&q=${searchLoacation}&days=3&aqi=no&alerts=no`;
+    let url = `https://api.weatherapi.com/v1/forecast.json?key=b6045a225b9342e5afd15235241610&q=${searchLoacation}&days=3&aqi=no&alerts=no`;
     const res = await fetch(url);
     const data = await res.json();
     let date;
